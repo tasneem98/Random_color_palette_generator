@@ -22,7 +22,7 @@ linter:
   # producing the lint.
   rules:
     - library_names
-
+    - trailing_commas: preserve
 
     - prefer_const_constructors
     - prefer_const_literals_to_create_immutables
