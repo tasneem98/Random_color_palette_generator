@@ -10,7 +10,11 @@ class CardColor extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Clipboard.setData(ClipboardData(text: color.toHexString()));
+        Clipboard.setData(ClipboardData(text: color.toHexString())).then((
+          value,
+        ) {
+          //Todo: Display a notification when the selected color's HEX code has been copied
+        });
       },
       child: Card(
         shape: RoundedRectangleBorder(

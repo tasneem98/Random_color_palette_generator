@@ -1,5 +1,6 @@
-import 'package:color_palette_generator/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+
+import '/core/utils/constants.dart';
 
 class AppTheme {
   static ButtonStyle disabledButtonStyle = ElevatedButton.styleFrom(

@@ -17,6 +17,17 @@ This Flutter mobile application generates a visually appealing random color pale
 -   **Responsive Grid Layout:** Colors are displayed in a grid that adapts to screen space (currently 2 columns).
 -   **(Potential Feature) Last Item Centering:** Logic to visually center the last color card if it's the only one in the final row of a 2-column grid.
 
+## Requirements
+* [x] Setup a React Native App (Flutter or your favorite framework would work too)
+* [x] Display a random color palette when a user opens the mobile app
+* [x] Create a button for the user to generate a new color palette
+* [x] Allow the user to click on the selected color to copy its HEX code
+* [ ] Display a notification when the selected color's HEX code has been copied
+
+* ### For an extra challenge
+  * [ ] Allow the user to generate a new random color palette by shaking the phone
+
+
 ## Screenshots and demo
 *(Placeholder: You need to add screenshots of your running application here. It's highly recommended to show the main screen with the color palette.)*
 
