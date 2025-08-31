@@ -47,7 +47,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Generate Palette'),

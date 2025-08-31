@@ -22,7 +22,7 @@ class CardColor extends StatelessWidget {
             spacing: 8,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(child: ColoredBox(color: color)),
+              Expanded(child: Card.outlined(color: color)),
               Text(
                 color.toHexString(),
                 style: Theme.of(context).textTheme.labelMedium,
