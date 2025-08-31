@@ -30,5 +30,23 @@ class AppTheme {
         disabledForegroundColor: Colors.grey.shade500,
       ),
     ),
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: Colors.deepPurple.shade50,
+      contentTextStyle: const TextStyle(
+        color: Colors.deepPurple,
+        fontSize: 20.0,
+        fontWeight: FontWeight.bold,
+      ),
+      elevation: 5.0,
+      behavior: SnackBarBehavior.floating,
+      shape: ShapeBorder.lerp(
+        RoundedRectangleBorder(borderRadius: AppConstants.circularRadius12),
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.0),
+          side: const BorderSide(width: 2.0),
+        ),
+        0.5,
+      ),
+    ),
   );
 }

@@ -22,7 +22,7 @@ This Flutter mobile application generates a visually appealing random color pale
 * [x] Display a random color palette when a user opens the mobile app
 * [x] Create a button for the user to generate a new color palette
 * [x] Allow the user to click on the selected color to copy its HEX code
-* [ ] Display a notification when the selected color's HEX code has been copied
+* [x] Display a notification when the selected color's HEX code has been copied
 
 * ### For an extra challenge
   * [ ] Allow the user to generate a new random color palette by shaking the phone
@@ -33,7 +33,7 @@ This Flutter mobile application generates a visually appealing random color pale
 
 **Example:**
 
-![App Main Screen](assets/screenshot_palette.png)
+<img src="assets/screenshot_palette.png" alt="App Main Screen" width="200"/>
 <!-- ![App Feature X](assets/screenshot_feature_x.png) -->
 
 *Link to live demo (if available, e.g., a Flutter Web build or a short video): [Your Demo Link Here]*

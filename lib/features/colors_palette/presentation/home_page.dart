@@ -49,11 +49,8 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    error: (error, stackTrace) => Center(
-                      child: Text(
-                        '--Error: ${error.toString()}\n--Stack Trace: $stackTrace',
-                      ),
-                    ),
+                    error: (error, stackTrace) =>
+                        Center(child: Text('Error: ${error.toString()}')),
                     loading: () =>
                         const Center(child: CircularProgressIndicator()),
                   ),
