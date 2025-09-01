@@ -1,5 +1,5 @@
 import 'package:color_palette_generator/core/utils/app_alert_dialog.dart';
-import 'package:color_palette_generator/core/utils/app_snck_bar.dart';
+import 'package:color_palette_generator/core/utils/app_snack_bar.dart';
 import 'package:color_palette_generator/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
