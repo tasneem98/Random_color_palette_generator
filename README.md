@@ -1,39 +1,100 @@
-# DevProjects - Random color palette generator mobile app
+# 🏡 DevProjects - Random color palette generator mobile app
 
 This is an open source project from [DevProjects](http://www.codementor.io/projects). Feedback and questions are welcome!
-Find the project requirements here: [Random color palette generator mobile app](https://www.codementor.io/projects/mobile/random-color-palette-generator-mobile-app-cfkyclpsex)
+🔗 Project requirements: [Random color palette generator mobile app](https://www.codementor.io/projects/mobile/random-color-palette-generator-mobile-app-cfkyclpsex)
 
-## Tech/framework used
-Built with **Flutter** (using the Dart programming language).
+## 📖 Description
+This Flutter mobile application allows users to generate a visually appealing random color palette. It displays a collection of colors, each shown with its hexadecimal code. The app also demonstrates how to handle runtime permissions for features like notifications, including guiding users to app settings if permissions are permanently denied.
+---
 
-## Description
-This Flutter mobile application generates a visually appealing random color palette. It displays a collection of colors, each shown with its hexadecimal code. The app demonstrates the use of Flutter widgets for layout and dynamic content display.
-
-## Features
--   **Random Palette Generation:** (Assuming future implementation - current code shows a fixed list)
-    *   *Note: Currently displays a predefined list of colors. Random generation can be added.*
+## 🚀 Features
+-   **Random Palette Generation**
 -   **Color Display:** Colors are presented in individual cards.
 -   **Hex Code Visibility:** Each color card displays its corresponding hexadecimal value.
 -   **Responsive Grid Layout:** Colors are displayed in a grid that adapts to screen space (currently 2 columns).
--   **(Potential Feature) Last Item Centering:** Logic to visually center the last color card if it's the only one in the final row of a 2-column grid.
+-   **Notification System:** 
+    *   Requests user permission to display notifications.
+    *   Handles cases where notification permission is denied or permanently denied by prompting the user to open app settings.
+    *   Displays a notification (e.g., when a color's HEX code is copied)
+-   **Shake Detection:** Shake the device to generate a new palette.
 
-## Screenshots and demo
-*(Placeholder: You need to add screenshots of your running application here. It's highly recommended to show the main screen with the color palette.)*
+---
 
-**Example:**
+## 📸 Screenshots & Demo
 
-![App Main Screen](assets/screenshot_palette.png)
-<!-- ![App Feature X](assets/screenshot_feature_x.png) -->
+<img src="assets/screenshot_palette.png" alt="App Main Screen" width="200"/>
+<img src="assets/screenshot_notifications.png" alt="App Notifications of copied color" width="200"/>
+---
 
-*Link to live demo (if available, e.g., a Flutter Web build or a short video): [Your Demo Link Here]*
+## 🛠️ Tech Stack
+Built with **Flutter** (using the Dart programming language).
+- **Key Packages**:
+  - `flutter_local_notifications`: For displaying local notifications.
+  - `permission_handler`: For checking and requesting permissions, and guiding users to app settings.
+  - `shake`: For detect phone shakes.
+---
 
-## Installation
-Instructions for other developers on how to install and run your code on their local environment.
+## 📂 Project Structure
+```
+lib/
+│
+├── core/
+│   ├── network/
+│   │   ├── api_exceptions.dart
+│   │   └── dio_client.dart
+│   ├── notifications/
+│   │   └── notification_service.dart
+│   ├── themes/
+│   │   └── app_theme.dart
+│   └── utils/
+│       ├── app_alert_dialog.dart
+│       ├── app_snack_bar.dart
+│       └── constants.dart
+│
+├── features/
+│   └── colors_palette/
+│       ├── data/
+│       │   ├── api_repository.dart
+│       │   ├── api_service.dart
+│       │   └── models/
+│       │       └── generated_palette.dart
+│       ├── presentation/
+│       │   └── home_page.dart
+│       └── providers/
+│           ├── colors_providers.dart
+│           └── shake_provider.dart
+│
+├── widgets/
+│   └── card_color.dart
+│
+└── main.dart
+```
+---
+
+## 🟦 Requirements
+* [x] Setup a React Native App (Flutter or your favorite framework would work too)
+* [x] Display a random color palette when a user opens the mobile app
+* [x] Create a button for the user to generate a new color palette
+* [x] Allow the user to click on the selected color to copy its HEX code
+* [x] Display a notification when the selected color's HEX code has been copied
+* [x] (Extra challenge) Allow the user to generate a new random color palette by shaking the phone
+---
+
+## ⚙️ Installation & Setup
 
 ### Prerequisites
 -   **Flutter SDK:** Ensure Flutter is installed on your system. For installation instructions, visit the [official Flutter documentation](https://flutter.dev/docs/get-started/install).
--   **IDE:** An Integrated Development Environment like Android Studio (with the Flutter plugin) or Visual Studio Code (with the Flutter extension).
 -   **Dart SDK:** This is typically bundled with the Flutter SDK.
+-   **IDE:** An Integrated Development Environment like Android Studio (with the Flutter plugin) or Visual Studio Code (with the Flutter extension).
+-   **Android Specific (for Notifications on API 33+):**
+    Ensure your `android/app/src/main/AndroidManifest.xml` includes:
+    ```
+    <!--    Internet permission-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--    Notification permissions  -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    ```
+
 
 ### Steps to Run
 1.  **Clone the repository (if applicable):**
@@ -56,22 +117,24 @@ cd color_palette_generator
 ```
 flutter pub get
 flutter run    
-```    
+```
+---
 
-## Project Structure Overview (Simplified)
-```
-color_palette_generator/ 
-│   
-├── lib/ 
-│   
-├── main.dart       # Main application entry point 
-│   
-├── home_page.dart  # Main screen widget, displays the color palette 
-│   
-└── card_color.dart # Widget for displaying a single color card 
-├── android/        # Android specific project files 
-├── ios/            # iOS specific project files 
-├── assets/         # (Create this folder for your screenshots, e.g., assets/screenshot_palette.png) 
-├── pubspec.yaml    # Project metadata and dependencies 
-└── README.md       # This file
-```
+## 📖 Usage
+1. Launch the app
+2. Generate a palette
+    * Tap the "Generate Palette" button
+    * Or shake the phone
+3. Tap a color card to copy its HEX code 
+4. A notification will confirm the HEX code was copied
+---
+
+## 🤝Contributing
+
+### Contributions are welcome! 🎉
+
+1. Fork the repository
+2. Create a new branch → `(git checkout -b feature-branch)`
+3. Commit changes → `git commit -m "Add feature XYZ"`
+4. Push changes → `git push origin feature-branch`
+5. Open a Pull Request.

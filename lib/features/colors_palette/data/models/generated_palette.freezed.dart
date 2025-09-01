@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GeneratedPalette {
 
-@JsonKey(name: 'result') List<List<int>>? get result;
+ List<List<int>>? get result;
 /// Create a copy of GeneratedPalette
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $GeneratedPaletteCopyWith<$Res>  {
   factory $GeneratedPaletteCopyWith(GeneratedPalette value, $Res Function(GeneratedPalette) _then) = _$GeneratedPaletteCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'result') List<List<int>>? result
+ List<List<int>>? result
 });
 
 
@@ -153,7 +153,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'result')  List<List<int>>? result)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<List<int>>? result)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GeneratedPalette() when $default != null:
 return $default(_that.result);case _:
@@ -174,7 +174,7 @@ return $default(_that.result);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'result')  List<List<int>>? result)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<List<int>>? result)  $default,) {final _that = this;
 switch (_that) {
 case _GeneratedPalette():
 return $default(_that.result);case _:
@@ -194,7 +194,7 @@ return $default(_that.result);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'result')  List<List<int>>? result)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<List<int>>? result)?  $default,) {final _that = this;
 switch (_that) {
 case _GeneratedPalette() when $default != null:
 return $default(_that.result);case _:
@@ -209,11 +209,11 @@ return $default(_that.result);case _:
 @JsonSerializable()
 
 class _GeneratedPalette implements GeneratedPalette {
-  const _GeneratedPalette({@JsonKey(name: 'result') final  List<List<int>>? result}): _result = result;
+  const _GeneratedPalette({final  List<List<int>>? result}): _result = result;
   factory _GeneratedPalette.fromJson(Map<String, dynamic> json) => _$GeneratedPaletteFromJson(json);
 
  final  List<List<int>>? _result;
-@override@JsonKey(name: 'result') List<List<int>>? get result {
+@override List<List<int>>? get result {
   final value = _result;
   if (value == null) return null;
   if (_result is EqualUnmodifiableListView) return _result;
@@ -255,7 +255,7 @@ abstract mixin class _$GeneratedPaletteCopyWith<$Res> implements $GeneratedPalet
   factory _$GeneratedPaletteCopyWith(_GeneratedPalette value, $Res Function(_GeneratedPalette) _then) = __$GeneratedPaletteCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'result') List<List<int>>? result
+ List<List<int>>? result
 });
 
 

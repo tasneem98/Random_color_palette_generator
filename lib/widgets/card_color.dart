@@ -1,3 +1,4 @@
+import 'package:color_palette_generator/core/notifications/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,9 +9,22 @@ class CardColor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final notificationService = LocalNotificationService.instance;
+
     return InkWell(
       onTap: () {
-        Clipboard.setData(ClipboardData(text: color.toHexString()));
+        Clipboard.setData(ClipboardData(text: color.toHexString())).then((
+          value,
+        ) {
+          //Todo: Display a notification when
+          // the selected color's HEX code has been copied
+          if (context.mounted) {
+            notificationService.showNotification(
+              context,
+              message: 'Color ${color.toHexString()} copied to clipboard',
+            );
+          }
+        });
       },
       child: Card(
         shape: RoundedRectangleBorder(
