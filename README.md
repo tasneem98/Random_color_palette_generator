@@ -72,7 +72,6 @@ lib/
 ---
 
 ## 🟦 Requirements
-* [x] Setup a React Native App (Flutter or your favorite framework would work too)
 * [x] Display a random color palette when a user opens the mobile app
 * [x] Create a button for the user to generate a new color palette
 * [x] Allow the user to click on the selected color to copy its HEX code
