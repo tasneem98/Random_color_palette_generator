@@ -16,7 +16,8 @@ class CardColor extends StatelessWidget {
         Clipboard.setData(ClipboardData(text: color.toHexString())).then((
           value,
         ) {
-          //Todo: Display a notification when the selected color's HEX code has been copied
+          //Todo: Display a notification when
+          // the selected color's HEX code has been copied
           if (context.mounted) {
             notificationService.showNotification(
               context,

@@ -84,11 +84,15 @@ class LocalNotificationService {
           context,
           title: "Notification Permission Denied",
           message:
-              "Notifications are disabled. Please enable them in app settings to receive notifications.",
+              "Notifications are disabled. Please enable them in app settings "
+              "to receive notifications.",
           actionButton: TextButton(
             onPressed: () async {
               Navigator.pop(context);
+
               await openAppSettings();
+
+              // Check if the notification permission is granted after opening the settings
               final statusAfterSettings = await Permission.notification.status;
               if (statusAfterSettings.isGranted) {
                 await _plugin.show(0, '', message, details());
